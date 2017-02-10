@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-boot-01
+  datasource:
+    url: jdbc:postgresql:calm_sds_db-stg
+    username: ${CALM_DB_USERNAME:calmdbuser}
+    password: ${CALM_DB_PASSWORD:1234}
+    driverClassName: org.postgresql.Driver
+    initialize: true
+    continueOnError: false
+    initialSize: 0
+    timeBetweenEvictionRunsMillis: 5000
+    minEvictableIdleTimeMillis: 5000
+    minIdle: 0
+    validation-query: select 1
+    test-on-borrow: true
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
